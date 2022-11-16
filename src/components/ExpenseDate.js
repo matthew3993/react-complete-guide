@@ -1,5 +1,8 @@
 import './ExpenseDate.css';
 
+/**
+ * Outputs date in EXACT format in EXACT look.
+ */
 function ExpenseDate(props) {
     const month = props.date.toLocaleString('en-US', { month: 'long' });
     const year = props.date.getFullYear();
