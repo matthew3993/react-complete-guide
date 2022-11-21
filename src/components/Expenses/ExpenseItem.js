@@ -8,7 +8,10 @@ const ExpenseItem = (props) => {
     // 'useState' is one of React's hooks. Hooks start with word 'use'
     // convection: [{nameOfVariable}, set{NameOfVariable}]
     // setTitle is so called 'state updating function'
+    // useState registers 'state' (~ some value as a state) for the component INSTANCE in which it is being called
+    // each component instance has it's own state - it on 'per component instance' basis
     const [title, setTitle] = useState(props.title); // registering the hook
+    console.log('ExpenseItem evaluated by React');
 
     // let title = props.title;
 
