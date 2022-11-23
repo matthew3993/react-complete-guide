@@ -13,32 +13,44 @@ const ExpenseForm = () => {
     const [userInput, setUserInput] = useState({
         enteredTitle: '',
         enteredAmount: '',
-        enteredDate: ''
+        enteredDate: '',
     });
 
     const titleChangeHandler = (event) => {
         // console.log(event.target.value);
-        // setEnteredTitle(event.target.value);
-        setUserInput({
-            ...userInput,
-            enteredTitle: event.target.value
-        });
+        setEnteredTitle(event.target.value);
+
+        // setUserInput({
+        //     ...userInput,
+        //     enteredTitle: event.target.value
+        // });
+
+        // this is preffered, because in case there are many state updated scheduled, you could be depending on
+        // outdated or incorrect state snapshot if approach above is used
+        // setUserInput((prevState) => {
+        //     return {
+        //         ...prevState,
+        //         enteredTitle: event.target.value,
+        //     };
+        // });
     };
 
     const amountChangeHandler = (event) => {
-        // setEnteredAmount(event.target.value);
-        setUserInput({
-            ...userInput,
-            enteredAmount: event.target.value
-        });
+        setEnteredAmount(event.target.value);
+        
+        // setUserInput({
+        //     ...userInput,
+        //     enteredAmount: event.target.value,
+        // });
     };
 
     const dateChangeHandler = (event) => {
-        // setEnteredDate(event.target.value);
-        setUserInput({
-            ...userInput,
-            enteredDate: event.target.value
-        });
+        setEnteredDate(event.target.value);
+
+        // setUserInput({
+        //     ...userInput,
+        //     enteredDate: event.target.value,
+        // });
     };
 
     return (
