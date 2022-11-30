@@ -31,6 +31,12 @@ const App = () => {
         },
     ];
 
+    const addExpenseDataHandler = enteredExpenseData => {
+        // expenses.push(enteredExpenseData);
+        console.log('In App.js');
+        console.log(enteredExpenseData);
+    }
+
     // this is classic JS code
     // return React.createElement('div', {},
     //     React.createElement('h2', {}, "Let's get started!"),
@@ -40,7 +46,7 @@ const App = () => {
     // this is JSX code
     return (
         <div>
-            <NewExpense />
+            <NewExpense onAddExpenseData={addExpenseDataHandler}/>
             <p>This is also visible</p>
             <Expenses items={expenses} />
         </div>
