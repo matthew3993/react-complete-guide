@@ -47,7 +47,6 @@ const App = () => {
     return (
         <div>
             <NewExpense onAddExpenseData={addExpenseDataHandler}/>
-            <p>This is also visible</p>
             <Expenses items={expenses} />
         </div>
     );
