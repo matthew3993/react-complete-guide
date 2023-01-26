@@ -5,7 +5,7 @@ import './ExpensesFilter.css';
 const ExpensesFilter = (props) => {
     const yearSelectChangeHandler = (event) => {
         const selectedYear = event.target.value;
-        console.log('ExpenseFilter: selectedYear: ' + selectedYear);
+        // console.log('ExpenseFilter: selectedYear: ' + selectedYear);
 
         props.onYearChange(selectedYear);
     };
